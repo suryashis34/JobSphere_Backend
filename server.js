@@ -26,10 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Enable CORS
-app.use(cors({
-  origin: process.env.FRONTEND_URL,
-  credentials: true,
-}));
+app.use(cors());
 
 // Mount routers
 app.use('/api/auth', auth);
